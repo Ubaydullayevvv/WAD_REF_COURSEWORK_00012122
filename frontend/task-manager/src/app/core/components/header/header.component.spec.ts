@@ -1,8 +1,11 @@
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
+  // Student ID: 00012122
+
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 

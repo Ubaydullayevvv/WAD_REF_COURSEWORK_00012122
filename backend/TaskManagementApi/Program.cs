@@ -3,6 +3,7 @@ using TaskManagementApi.Entities;
 using TaskManagementApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+    // Student ID: 00012122
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -14,7 +15,6 @@ builder.Services.AddDbContext<TaskManagementApi.Data.AppDbContext>(options =>
 builder.Services.AddScoped<IRepository<EntityTask>, TaskRepository>();
 builder.Services.AddScoped<IRepository<User>, GenericRepository<User>>();
 
-// ✅ Add this
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -27,7 +27,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// ✅ And this
 app.UseCors("AllowAll");
 
 app.UseSwagger();
