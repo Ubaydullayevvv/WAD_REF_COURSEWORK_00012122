@@ -1,0 +1,99 @@
+/* — Header — */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header button {
+  font-weight: 600;
+}
+
+/* — User list container — */
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* — Each user row — */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.user-item:last-child {
+  border-bottom: none;
+}
+
+.user-item:hover {
+  background-color: #fafafa;
+}
+
+/* — Info block — */
+.info {
+  line-height: 1.4;
+}
+
+/* style the entire “username: …” line */
+.username {
+  font-weight: 600;
+  color: #1976d2;
+  /* label color */
+}
+
+/* style the entire “email: …” line */
+.email {
+  display: block;
+  /* ensure it sits on its own line */
+  font-weight: 600;
+  color: #1976d2;
+  /* same label color */
+  margin-top: 0.25rem;
+}
+
+/* if you want the actual value portion darker,
+   override the color on the <span> value itself */
+.username span,
+.email span {
+  font-weight: normal;
+  color: #333;
+  /* value color */
+}
+
+/* — Action buttons — */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* — Responsive — */
+@media (max-width: 600px) {
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    margin-top: 0.5rem;
+  }
+}

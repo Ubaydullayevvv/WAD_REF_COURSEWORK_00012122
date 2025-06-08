@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>
+  {{ isEdit ? 'Edit User' : 'Create User' }}
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="save()" mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <textarea matInput formControlName="email"></textarea>
+  </mat-form-field>
+</form>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-flat-button (click)="save()" color="primary" [disabled]="form.invalid">
+    {{ isEdit ? 'Update' : 'Create' }}
+  </button>
+</mat-dialog-actions>

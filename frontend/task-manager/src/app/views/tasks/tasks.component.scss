@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* — Task list header (reuses .header from above) — */
+/* If you want a different look for the Tasks header, you can override here: */
+.header {
+  /* same as Users header, or tweak colors here */
+}
+
+/* — Task list container — */
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* — Each task row — */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background-color: #fafafa;
+}
+
+/* — Checkbox styling — */
+.task-item input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* — Main content block — */
+.task-content {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Title */
+.task-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Strikethrough when completed */
+.task-content h3.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Description */
+.task-content .description {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Meta info */
+.task-content .meta span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* — Action buttons — */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.actions button:hover {
+  background-color: #eee;
+}
+
+/* — Responsive (stack on narrow screens) — */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    margin-top: 0.5rem;
+  }
+}

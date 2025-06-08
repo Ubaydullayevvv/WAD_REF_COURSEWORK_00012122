@@ -1,0 +1,44 @@
+<div class="header">
+  <h2>Tasks</h2>
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="openCreateTask()"
+  >Add task</button>
+</div>
+
+<ul class="task-list">
+  <li *ngFor="let task of tasks" class="task-item">
+    <!-- Completed checkbox -->
+    <input
+      type="checkbox"
+      [(ngModel)]="task.isCompleted"
+      (change)="toggleCompleted(task)"
+      aria-label="Mark task completed"
+    />
+
+    <!-- Main content -->
+    <div class="task-content">
+      <h3 [class.completed]="task.isCompleted">
+        title: {{ task.title }}
+      </h3>
+      <p class="description" >
+        description: {{ task.description }}
+      </p>
+      <div class="meta">
+        <span>Due: {{ task.dueDate | date:'mediumDate' }}</span><br>
+        <span>Priority: {{ task.priority }}</span><br>
+        <span>User ID: {{ task.userId }}</span><br>
+        <span>Status:
+          <strong>{{ task.isCompleted ? 'Done' : 'Pending' }}</strong>
+        </span><br>
+      </div>
+    </div>
+
+    <!-- (Optional) Delete or edit buttons -->
+    <div class="actions">
+      <button (click)="edit(task)">✎</button>
+      <button (click)="remove(task)">🗑</button>
+    </div>
+  </li>
+</ul>

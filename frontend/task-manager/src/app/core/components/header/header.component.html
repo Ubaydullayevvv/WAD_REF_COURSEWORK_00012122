@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="header-title">Task Manager App</div>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a
+          routerLink="/tasks"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Tasks
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/users"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Users
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

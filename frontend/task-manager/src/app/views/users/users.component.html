@@ -1,0 +1,25 @@
+<div class="header">
+  <h2>Users</h2>
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="create()"
+  >Add user</button>
+</div>
+
+<ul class="user-list">
+  <li *ngFor="let user of users" class="user-item">
+    <div class="info">
+      <span class="username">username: {{ user.username }}</span><br>
+      <span class="email">email: {{ user.email }}</span>
+    </div>
+    <div class="actions">
+      <button mat-icon-button color="accent" (click)="edit(user)" aria-label="Edit">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="remove(user)" aria-label="Delete">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </li>
+</ul>
