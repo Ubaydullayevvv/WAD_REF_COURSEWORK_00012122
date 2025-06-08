@@ -14,5 +14,5 @@ This application was developed for Web Application module, as coursework portfol
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Ubaydullayevvv/WAD_REF_COURSEWORK.git
+   git clone https://github.com/Ubaydullayevvv/WAD_REF_COURSEWORK_00012122.git
    cd WAD_REF_COURSEWORK
