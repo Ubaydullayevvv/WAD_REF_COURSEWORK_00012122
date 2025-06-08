@@ -1,24 +1,18 @@
-# Task Management Web Application
+# Task Manager (WAD Coursework)
 
-This application was developed for Web Application module, as coursework portfolio project @ WIUT by student ID: 00012122.
+This application was developed for Web Application module, as coursework portfolio project @ WIUT by student ID: **000121222**.
 
-## Backend
-An ASP.NET Core Web API using Entity Framework Core (code-first) with Repository and DTO design patterns.
+## Prerequisites
 
-## Frontend
-Angular SPA for managing tasks via CRUD operations.
+- **.NET 8.0 SDK** (or later)
+- **Node.js** v18+ (LTS recommended)
+- **Angular CLI** v16+ (`npm install -g @angular/cli`)
 
-## Setup Instructions
-1. Ensure .NET 7 SDK and Node.js 18+ are installed.
-2. Navigate to `backend/TaskManagementApi` and run `dotnet run --project TaskManagementApi.csproj` to start the API.
-3. Navigate to `frontend/task-manager` and run `npm install` then `ng serve` to run the Angular app.
+> **Note:** The backend uses the EF Core In-Memory provider, so no external database is required. Data will reset each time you restart the API.
 
-## Technologies Used
-- ASP.NET Core 7
-- Entity Framework Core
-- Angular 19
-- Swagger
+## Setup & Run
 
-
-## Documentation
-See the `docs` folder for ERD, Swagger screenshots, and UI screenshots demonstrating CRUD operations.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ubaydullayevvv/WAD_REF_COURSEWORK.git
+   cd WAD_REF_COURSEWORK
